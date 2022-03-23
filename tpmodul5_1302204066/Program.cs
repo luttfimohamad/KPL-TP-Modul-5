@@ -10,10 +10,22 @@ namespace tpmodul5_1302204066
     {
         static void Main(string[] args)
         {
-            // membuat instance class
-            SayaTubeVideo videoSaya = new SayaTubeVideo("Tutorial Design By Contract – [Mohamad Lutfi]");
-            videoSaya.IncreasePlayCount(1302204066);
-            videoSaya.PrintVideoDetails();
+            SayaTubeVideo v = new SayaTubeVideo("Tutorial Design By Contract – [Mohamad Lutfi]");
+
+            v.IncreasePlayCount(13);
+            v.PrintVideoDetails();
+
+            v.IncreasePlayCount(20);
+            v.PrintVideoDetails();
+
+            v.IncreasePlayCount(1302204066);
+            v.PrintVideoDetails();
+            
+            for (int i = 0; i < 218; i++)
+            {
+                v.IncreasePlayCount(10000000);
+            }
+            v.PrintVideoDetails();
         }
     }
 }
